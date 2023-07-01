@@ -1,13 +1,15 @@
 public class Runner {
-    private static int gameSpeed = 1000;
+    private static int gameSpeed = 500;
+    private static int gameSize = 20;
     public Runner(){
 
 
     }
     public static void main(String[] args) throws InterruptedException {
-        GameState g = new GameState(20);
-        g.setAll(new Empty());
-        g.set(new Creature(),10,10);
+        GameState g = new GameState(gameSize);
+        g.setAll(new Food());
+        g.set(new Creature(),(int)(Math.random() * 20),(int)(Math.random() * 20));
+        g.set(new Creature(), (int)(Math.random() * 20), (int)(Math.random() * 20));
         System.out.println(g);
 
         for (int t = 0; t < 20; t++){
