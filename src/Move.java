@@ -8,12 +8,15 @@ public class Move {
     }
 
     public Move(int x, int y) {
+        /*
         if (x != 0 && x!= 1 && x != -1) {
             throw new RuntimeException("x is " + Integer.toString(x) + ", which is invalid");
         }
         if (y != 0 && y!= 1 && y != -1) {
             throw new RuntimeException("y is " + Integer.toString(y) + ", which is invalid");
         }
+
+         */
         this.x = x;
         this.y = y;
     }
@@ -25,4 +28,8 @@ public class Move {
         return x;
     }
 
+    @Override
+    public String toString() {
+        return "X: " + x + " , Y: " + y;
+    }
 }

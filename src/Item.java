@@ -1,5 +1,10 @@
 public abstract class Item {
-    Move nextDirection(){
+    int value;
+    Move nextMove(){
         return new Move();
+    }
+
+    int getVal(){
+        return value;
     }
 }
